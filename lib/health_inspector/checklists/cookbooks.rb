@@ -90,7 +90,7 @@ module HealthInspector
       title "cookbooks"
 
       def each_item
-        all_cookbook_names = ( server_cookbooks.keys + local_cookbooks.keys ).uniq.sort
+        all_cookbook_names = (server_cookbooks.keys + local_cookbooks.keys).uniq.sort
 
         all_cookbook_names.each do |name|
           yield load_item(name)
